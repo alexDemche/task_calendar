@@ -4,3 +4,16 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin day($day, $value1, $value2) {
+  .calendar-#{$day} div:first-child {
+    grid-column-start: $value1;
+    grid-column-end: $value2;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
