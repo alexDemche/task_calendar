@@ -1,7 +1,39 @@
 @import "utils";
-@import "fonts";
-@import "typography";
 
 body {
-  background: $c-gray;
+  @include center();
+  margin: 0;
+  height: 100vh;
 }
+
+.calendar {
+  display: grid;
+  grid: repeat(6, 1fr) / repeat(7, 1fr);
+  grid-gap: 1px;
+}
+
+.calendar div {
+  @include center();
+  width: 100px;
+  min-height: 100px;
+  background-color: $c-primary;
+  border: $main-border;
+  font-size: $fz-normal;
+  font-family: $font-stack;
+  box-sizing: border-box;
+  transition: background-color 0.5s linear, transform 0.5s linear;
+
+  &:hover {
+    background-color: $c-hover;
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+}
+
+@include day(mon,1,2);
+@include day(tue,2,3);
+@include day(wed,3,4);
+@include day(thu,4,5);
+@include day(fri,5,6);
+@include day(sat,6,7);
+@include day(sun,7,8);

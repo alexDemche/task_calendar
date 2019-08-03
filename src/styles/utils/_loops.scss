@@ -1,0 +1,10 @@
+// Counter for each cell of the day
+$months: 28, 29, 30, 31;
+
+@each $month in $months {
+  @for $i from 1 through $month {
+    .calendar-#{$month} div:nth-child(#{$i})::after {
+      content: "#{$i}";
+    }
+  }
+}
