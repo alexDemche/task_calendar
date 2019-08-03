@@ -17,3 +17,28 @@
   justify-content: center;
   align-items: center;
 }
+
+// Counter for each cell of the day
+@for $i from 1 through 31 {
+  .calendar-31 div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 1 through 30 {
+  .calendar-30 div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 1 through 29 {
+  .calendar-29 div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 1 through 28 {
+  .calendar-28 div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
